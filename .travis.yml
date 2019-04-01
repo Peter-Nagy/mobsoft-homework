@@ -21,10 +21,10 @@ deploy:
  file: app/build/outputs/apk/release/app-release.apk
  skip_cleanup: true
  on:
- tags: true
+  tags: true
 notifications:
  email:
- recipients:
- - nagypeterszabolcs@gmail.com
- on_success: always
- on_failure: always
+  recipients:
+  - nagypeterszabolcs@gmail.com
+  on_success: always
+  on_failure: always

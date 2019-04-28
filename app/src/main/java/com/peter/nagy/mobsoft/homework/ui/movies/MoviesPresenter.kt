@@ -7,7 +7,9 @@ import javax.inject.Inject
 
 class MoviesPresenter @Inject constructor(private val executor: Executor, private val moviesInteractor: MoviesInteractor) : Presenter<MoviesScreen>() {
     fun showMovieSearchList() {
-        // TODO
+        executor.execute {
+            moviesInteractor.getMovies(null)
+        }
     }
     fun buttonPressed() {
         screen?.showMovie("")

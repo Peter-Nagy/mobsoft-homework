@@ -24,5 +24,5 @@ interface LikeDao {
     fun deleteLike(like: Like)
 
     @Query("SELECT * FROM `LIKE` WHERE movieId == :movieId")
-    fun getLike(movieId: Int): LiveData<Like>
+    fun getLike(movieId: Int): Like?
 }

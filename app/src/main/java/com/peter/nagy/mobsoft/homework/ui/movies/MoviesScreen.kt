@@ -1,6 +1,8 @@
 package com.peter.nagy.mobsoft.homework.ui.movies
 
+import io.swagger.client.model.MovieListObject
+
 interface MoviesScreen {
-    fun showMovie(movieId: String)
-    fun showMovies(searchTerm: String)
+    fun showMovie(movieId: Int)
+    fun showMovies(movies: List<MovieListObject>)
 }

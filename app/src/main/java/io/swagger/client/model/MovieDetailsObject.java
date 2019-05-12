@@ -15,7 +15,6 @@ package io.swagger.client.model;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.LocalDate;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -29,6 +28,34 @@ import java.util.Objects;
 public class MovieDetailsObject {
   @SerializedName("adult")
   private Boolean adult = null;
+
+  public Boolean getAdult() {
+    return adult;
+  }
+
+  public void setAdult(Boolean adult) {
+    this.adult = adult;
+  }
+
+  public String getBackdropPath() {
+    return backdropPath;
+  }
+
+  public void setBackdropPath(String backdropPath) {
+    this.backdropPath = backdropPath;
+  }
+
+  public String getPosterPath() {
+    return posterPath;
+  }
+
+  public void setPosterPath(String posterPath) {
+    this.posterPath = posterPath;
+  }
+
+  public Boolean getVideo() {
+    return video;
+  }
 
   @SerializedName("backdrop_path")
   private String backdropPath = null;
@@ -70,10 +97,10 @@ public class MovieDetailsObject {
   private List<MoviedetailsobjectProductionCountries> productionCountries = null;
 
   @SerializedName("release_date")
-  private LocalDate releaseDate = null;
+  private String releaseDate = null;
 
   @SerializedName("revenue")
-  private Integer revenue = null;
+  private Long revenue = null;
 
   @SerializedName("runtime")
   private Integer runtime = null;
@@ -322,7 +349,7 @@ public class MovieDetailsObject {
     this.productionCountries = productionCountries;
   }
 
-  public MovieDetailsObject releaseDate(LocalDate releaseDate) {
+  public MovieDetailsObject releaseDate(String releaseDate) {
     this.releaseDate = releaseDate;
     return this;
   }
@@ -332,15 +359,15 @@ public class MovieDetailsObject {
    * @return releaseDate
   **/
   @ApiModelProperty(value = "")
-  public LocalDate getReleaseDate() {
+  public String getReleaseDate() {
     return releaseDate;
   }
 
-  public void setReleaseDate(LocalDate releaseDate) {
+  public void setReleaseDate(String releaseDate) {
     this.releaseDate = releaseDate;
   }
 
-  public MovieDetailsObject revenue(Integer revenue) {
+  public MovieDetailsObject revenue(Long revenue) {
     this.revenue = revenue;
     return this;
   }
@@ -350,11 +377,11 @@ public class MovieDetailsObject {
    * @return revenue
   **/
   @ApiModelProperty(value = "")
-  public Integer getRevenue() {
+  public Long getRevenue() {
     return revenue;
   }
 
-  public void setRevenue(Integer revenue) {
+  public void setRevenue(Long revenue) {
     this.revenue = revenue;
   }
 

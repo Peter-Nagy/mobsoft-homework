@@ -26,6 +26,30 @@ import java.util.Objects;
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-04-27T19:30:00.618+02:00")
 public class MovieListObject {
+  public String getPosterPath() {
+    return posterPath;
+  }
+
+  public void setPosterPath(String posterPath) {
+    this.posterPath = posterPath;
+  }
+
+  public Boolean getAdult() {
+    return adult;
+  }
+
+  public String getBackdropPath() {
+    return backdropPath;
+  }
+
+  public void setBackdropPath(String backdropPath) {
+    this.backdropPath = backdropPath;
+  }
+
+  public Boolean getVideo() {
+    return video;
+  }
+
   @SerializedName("poster_path")
   private String posterPath = null;
 

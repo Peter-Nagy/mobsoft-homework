@@ -1,6 +1,7 @@
 package com.peter.nagy.mobsoft.homework.ui
 
 import android.content.Context
+import com.peter.nagy.mobsoft.homework.interactor.movies.LikeInteractor
 import com.peter.nagy.mobsoft.homework.interactor.movies.MoviesInteractor
 import com.peter.nagy.mobsoft.homework.ui.movieDetails.MovieDetailsPresenter
 import com.peter.nagy.mobsoft.homework.ui.movies.MoviesPresenter
@@ -26,6 +27,6 @@ class UIModule(private val context: Context) {
 
     @Provides
     @Singleton
-    fun movieDetailsPresenter() = MovieDetailsPresenter()
+    fun movieDetailsPresenter(executor: Executor, moviesInteractor: MoviesInteractor, likeInteractor: LikeInteractor) = MovieDetailsPresenter(executor, moviesInteractor, likeInteractor)
 
 }

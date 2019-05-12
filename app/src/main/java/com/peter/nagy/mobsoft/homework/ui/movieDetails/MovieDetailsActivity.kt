@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.graphics.drawable.DrawableCompat
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.peter.nagy.mobsoft.homework.R
 import com.peter.nagy.mobsoft.homework.db.AppDatabase

@@ -13,8 +13,12 @@ import io.swagger.client.model.MovieListObject
 import kotlinx.android.synthetic.main.activity_main.searchView
 
 import javax.inject.Inject
+import com.google.firebase.analytics.FirebaseAnalytics
+
+
 
 class MoviesActivity : AppCompatActivity(), MoviesScreen {
+    private lateinit var mFirebaseAnalytics: FirebaseAnalytics
 
     @Inject
     lateinit var moviesPresenter: MoviesPresenter
@@ -25,6 +29,7 @@ class MoviesActivity : AppCompatActivity(), MoviesScreen {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         setContentView(R.layout.activity_main)
         injector.inject(this)
 
@@ -67,10 +72,20 @@ class MoviesActivity : AppCompatActivity(), MoviesScreen {
     }
 
     override fun showMovies(movies: List<MovieListObject>) {
+        val bundle = Bundle()
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "MOVIES_SHOWN")
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "MOVIES_SHOWN")
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "movie list")
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
         viewAdapter.submitList(movies)
     }
 
     override fun showMovie(movieId: Int) {
+        val bundle = Bundle()
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "MOVIE_TAPPED")
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "MOVIE_TAPPED")
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "movie")
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
         val intent = Intent(this, MovieDetailsActivity::class.java)
         intent.putExtra(KEY_MOVIE_ID, movieId)
         startActivity(intent)

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "148644800093",
+    "firebase_url": "https://mobweb-ce65f.firebaseio.com",
+    "project_id": "mobweb-ce65f",
+    "storage_bucket": "mobweb-ce65f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148644800093:android:a7832ea78b5cd80f",
+        "android_client_info": {
+          "package_name": "com.peter.nagy.mobsoft.homework"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148644800093-ii4rl380v3rpt8kk1msbjar243k4prh5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCADCJVkdJxn4CLoqKENoAoOOa-ZYaG-dM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148644800093-ii4rl380v3rpt8kk1msbjar243k4prh5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
